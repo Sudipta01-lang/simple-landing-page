@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Landing Page</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: sans-serif;
+        }
+        header {
+            width: 100%;
+            height: 100vh;
+            background: url('picture.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        nav {
+            width: 100%;
+            height: 100px;
+            background: transparent;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2em;
+            letter-spacing: 2px;
+            color: black;
+        }
+        .menu a {
+            text-decoration: none;
+            color: red;
+            font-size: 1.2em; /* Increased font size */
+            padding: 10px 20px;
+            position: relative;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+        .menu a:hover,
+        .menu a.active {
+            color: #e67e22;
+        }
+        .menu a.active::after,
+        .menu a:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e67e22;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease; /* Smooth underline transition */
+        }
+        .menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #e67e22;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        .register a {
+            text-decoration: none;
+            background-color: #e74c3c;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em; /* Matching the navbar font size */
+            transition: background-color 0.3s ease;
+        }
+        .register a:hover {
+            background-color: #c0392b; /* Darker shade on hover */
+        }
+        .hero-text {
+            text-align: center;
+            color: white;
+            margin-bottom: 350px;
+        }
+        .hero-text h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        .hero-text p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .hero-text a {
+            text-decoration: none;
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        .hero-text a:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="logo">Travel-X</div>
+        <div class="menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Hill Station</a>
+            <a href="#">Best Offers</a>
+            <a href="#">Our Sites</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="register">
+            <a href="#">Register</a>
+        </div>
+      </nav>  
+      <div class="hero-text">
+        <h1>Enjoy</h1>
+        <h1>International Travel Agency</h1>
+        <p>Book your next adventure now!</p>
+        <a href="#">Book your Trip</a>
+      </div>
+    </header>
+</body>
+</html>
